@@ -459,6 +459,7 @@ padding-left: 40px;
 </div>
 
 ---
+
 class: topic-slide-bd
 
 <style>
@@ -468,13 +469,13 @@ text-align: left;
 }
 
 .topic-slide-bd ul {
-font-size: 1em;
+font-size: 1.1em;
 line-height: 1.8;
 padding-left: 40px;
 }
 
 .topic-slide-bd ul ul {
-  font-size: 0.75em; /* Subtopicos menores */
+  font-size: 0.85em; /* Subtopicos menores */
   line-height: 1.6;
   padding-left: 30px;
 }
@@ -579,7 +580,7 @@ padding-left: 40px;
 
 .pull-left[
 
-### Artigo 1, 3 e 3
+### Artigo 1, 2 e 3
 #### Climate
 
 - Temperatura média anual, Amplitude térmica média diária, Isotermalidade...
