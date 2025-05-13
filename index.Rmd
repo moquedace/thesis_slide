@@ -459,19 +459,26 @@ padding-left: 40px;
 </div>
 
 ---
-class: topic-slide
+class: topic-slide-bd
 
 <style>
-.topic-slide h1 {
+.topic-slide-bd h1 {
 font-size: 2.5em;
 text-align: left;
 }
 
-.topic-slide ul {
-font-size: 1.5em;
+.topic-slide-bd ul {
+font-size: 1em;
 line-height: 1.8;
 padding-left: 40px;
 }
+
+.topic-slide-bd ul ul {
+  font-size: 0.75em; /* Subtopicos menores */
+  line-height: 1.6;
+  padding-left: 30px;
+}
+
 </style>
 
 # Material e métodos
@@ -482,18 +489,26 @@ padding-left: 40px;
 
 - Global Soil Mycobiome (GSM) - ([<u>Tedersoo et al., 2021</u>](https://doi.org/10.1007/s13225-021-00493-7))
 
+  - Abundância (SFA) e Riqueza (SFR) de fungos no solo à 5cm
+
 --
 
 - Global Root Traits Database (GRooT) - ([<u>Guerrero-Ramírez et al., 2021</u>](https://doi.org/10.1111/geb.13179))
+
+ - Taxa de renovação (RTR), colonização micorrízica (RMC), concentração de carbono (RCC) e  respiração específica das raízes (SRR)
+
 
 --
 
 - Soil Respiration Database (SRDB-V5) - ([<u>Jian et al., 2021</u>](https://doi.org/10.5194/essd-13-255-2021))
 
+ - Respiração heterotrófica (Rh) e total (Rs) do solo
+
 --
 
 - World Soil Information Service (WoSIS) & Global Soil Organic Carbon Stock dataset after Land Use and Land Cover Change (GSOCS-LULCC) - ([<u>Calisto et al., 2023</u>](https://doi.org/10.17027/isric-wdcsoils-20231130); [<u>Chen et al., 2024</u>](https://doi.org/10.5194/essd-2024-373))
 
+ - Estoque de carbono do solo (0-30 cm)
 
 
 ---
