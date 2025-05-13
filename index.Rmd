@@ -758,36 +758,7 @@ $$
 
 Em que: *n* representa o número de amostras; <strong>ρ<sub>c</sub></strong> é o coeficiente de correlação entre as duas variáveis, <strong>μ<sub>x</sub></strong> e <strong>μ<sub>y</sub></strong> são as médias para as duas variáveis, <strong>σ<sub>x</sub><sup>2</sup></strong> e <strong>σ<sub>y</sub><sup>2</sup></strong> são as variâncias correspondentes; <strong>P<sub>i</sub></strong> e <strong>O<sub>i</sub></strong> representam os valores previstos e observados no local *i*, respectivamente.
 
---
 
-- Modelo nulo
-
----
-class: topic-slide-g
-
-
-<style>
-.topic-slide h1 {
-font-size: 2.5em;
-text-align: left;
-}
-
-</style>
-
-# Material e métodos
-
-## Modelagem espacial
-
-### Ajuste do modelo
-#### Avaliação de incerteza
-- Mapa desvio padrão
-- Mapa índice de dissimilaridade ([<u>Meyer & Pebesma, 2021</u>](https://doi.org/10.1111/2041-210X.13650))
-
-<div style="text-align: center;">
-
-<img src="./img/accuracy.png" style="max-width: 30%; border-radius: 10px;" />
-
-</div>
 
 ---
 ```{css echo=FALSE}
@@ -868,11 +839,11 @@ width: 50%;
 ```
 
 .custom-left-r1[
-- Fungos estruturam o solo e estabilizam o carbono — mas sua distribuição global segue pouco compreendida
-- A distribuição fúngica global é desbalanceada: zonas-chave como trópicos e áridos seguem subamostradas, gerando incertezas críticas
-- A interação entre riqueza e abundância foi modulada por clima e textura do solo
-- Fatores edafoclimáticos, como pH, teor de argila e precipitação, mostraram-se preditores-chave
-- Tropical úmido × desertos: extremos funcionais com estratégias distintas
+- Desbalanceamento de dados limita a modelagem, especialmente em regiões tropicais e áridas
+- Alta variabilidade fúngica compromete a precisão, mesmo com bons algoritmos como o quantile random forest
+- Riqueza elevada em florestas tropicais devido à complexidade vegetal e ao aporte contínuo de matéria orgânica
+- Diversidade reduzida em ambientes áridos, marcada por comunidades especializadas adaptadas ao estresse
+- Fatores edáficos e uso do solo influenciam diretamente a atividade fúngica e devem ser considerados em estratégias conservacionistas
 
 ]
 
@@ -928,30 +899,34 @@ width: 50%;
 ```
 
 
-- Inovação no mapeamento global de traços radiculares
-- Estratégias radiculares refletem padrões biogeográficos
-- Raízes como eixo central da respiração e do fluxo de carbono
-- Maiores incertezas em trópicos e regiões áridas
-- Ampliar amostras e incluir novos traços é fundamental
+- Integração de múltiplos traços funcionais (RTR, RMC, RCC, SRR) ampliou a compreensão dos processos da rizosfera
+- As raízes exercem papel central na ciclagem de nutrientes e no fluxo de carbono do solo
+- Interações complexas entre raízes, biota e ambiente influenciam a dinâmica ecossistêmica subterrânea
+- Falta de dados em regiões tropicais e áridas compromete a precisão dos modelos e reforça a urgência de novas coletas
+- Futuras direções incluem ampliar bancos de dados e adotar métricas que capturem melhor a multifuncionalidade do solo
+
 
 .custom-left-r1[
 
 <div style="text-align: center;">
-<img src="./img/rcc.png" style="max-width: 90%; border-radius: 10px;" />
-<img src="./img/rmc.png" style="max-width: 90%; border-radius: 10px;" />
+
+<img src="./img/rcc.png" style="max-width: 80%; border-radius: 10px;" />
+<img src="./img/rmc.png" style="max-width: 80%; border-radius: 10px;" />
 
 </div>
 
 ]
 
+
 .custom-right-r1[
 
 <div style="text-align: center;">
-<img src="./img/rtr.png" style="max-width: 90%; border-radius: 10px;" />
-<img src="./img/srr.png" style="max-width: 90%; border-radius: 10px;" />
+
+<img src="./img/srr.png" style="max-width: 80%; border-radius: 10px;" />
+<img src="./img/rtr.png" style="max-width: 80%; border-radius: 10px;" />
+
 
 </div>
-
 
 ]
 
@@ -1000,11 +975,11 @@ width: 50%;
 ```
 
 .custom-left-r1[
-- Rs e Rh devem diminuir nos trópicos e aumentar nas altas latitudes
-- Precipitação e textura do solo são controladores-chave da resposta
-- Solos argilosos estabilizam SOC; arenosos o tornam vulnerável
-- Modelos tradicionais superestimam Rs e subestimam Rh ao ignorar propriedades do solo
-- Ampliar dados e integrar variáveis edáficas é fundamental para reduzir incertezas
+- A textura do solo, especialmente o teor de argila, influencia fortemente as respostas de Rs e Rh ao aquecimento
+- A inclusão de variáveis texturais nos modelos aumentou a precisão das predições
+- A sensibilidade ao aquecimento varia por região e cenário climático, sendo maior em solos arenosos e de alta latitude
+- Solos argilosos demonstram menor sensibilidade ao aquecimento por protegerem melhor o carbono orgânico
+- É necessário ampliar a base de dados de Rs e Rh e investigar as respostas de diferentes solos frente às mudanças climáticas
 
 
 ]
@@ -1057,12 +1032,13 @@ class: inverse, center, middle
 
 # Artigo 4
 
-- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
-- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
-- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
-- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
-- A inclusão de variáveis biológicas diretas e não apenas proxies
-- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+- O modelo ajustado superou o modelo nulo com alta acurácia, mesmo com maior erro nos extremos  
+- A inclusão direta de variáveis edafobiológicas permitiu capturar processos negligenciados por abordagens baseadas apenas em sensoriamento remoto 
+- A taxa de colonização micorrízica (RMC) emergiu como principal preditor nos trópicos, evidenciando o papel crítico da biota na dinâmica do SOC  
+- Abordagens explicativas revelaram interações complexas e hierarquias condicionais entre solo, clima e biologia, com efeitos não lineares 
+- A textura do solo, regime hídrico e atividade simbiótica interagem de forma regionalmente variável sobre o acúmulo de SOC
+- A ausência de bancos de dados robustos e harmonizados ainda limita a modelagem e amplia incertezas
+- A integração entre inteligência artificial explicável e pedologia se mostrou promissora para construir modelos mais interpretáveis e ecologicamente coerentes
 
 
 
@@ -1090,12 +1066,13 @@ width: 55%;
 ```
 
 .custom-left-r3[
-- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
-- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
-- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
-- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
-- A inclusão de variáveis biológicas diretas e não apenas proxies
-- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+- O modelo ajustado superou o modelo nulo com alta acurácia, mesmo com maior erro nos extremos  
+- A inclusão direta de variáveis edafobiológicas permitiu capturar processos negligenciados por abordagens baseadas apenas em sensoriamento remoto 
+- A taxa de colonização micorrízica (RMC) emergiu como principal preditor nos trópicos, evidenciando o papel crítico da biota na dinâmica do SOC  
+- Abordagens explicativas revelaram interações complexas e hierarquias condicionais entre solo, clima e biologia, com efeitos não lineares 
+- A textura do solo, regime hídrico e atividade simbiótica interagem de forma regionalmente variável sobre o acúmulo de SOC
+- A ausência de bancos de dados robustos e harmonizados ainda limita a modelagem e amplia incertezas
+- A integração entre inteligência artificial explicável e pedologia se mostrou promissora para construir modelos mais interpretáveis e ecologicamente coerentes
 
 
 ]
@@ -1128,12 +1105,13 @@ width: 45%;
 ```
 
 .custom-left-r2[
-- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
-- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
-- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
-- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
-- A inclusão de variáveis biológicas diretas e não apenas proxies
-- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+- O modelo ajustado superou o modelo nulo com alta acurácia, mesmo com maior erro nos extremos  
+- A inclusão direta de variáveis edafobiológicas permitiu capturar processos negligenciados por abordagens baseadas apenas em sensoriamento remoto 
+- A taxa de colonização micorrízica (RMC) emergiu como principal preditor nos trópicos, evidenciando o papel crítico da biota na dinâmica do SOC  
+- Abordagens explicativas revelaram interações complexas e hierarquias condicionais entre solo, clima e biologia, com efeitos não lineares 
+- A textura do solo, regime hídrico e atividade simbiótica interagem de forma regionalmente variável sobre o acúmulo de SOC
+- A ausência de bancos de dados robustos e harmonizados ainda limita a modelagem e amplia incertezas
+- A integração entre inteligência artificial explicável e pedologia se mostrou promissora para construir modelos mais interpretáveis e ecologicamente coerentes
 
 
 ]
