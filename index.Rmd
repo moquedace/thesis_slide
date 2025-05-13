@@ -1,0 +1,1251 @@
+---
+output:
+  xaringan::moon_reader:
+     
+    # css: [xaringan-themer.css]
+    css: ["default", "metropolis", "metropolis-fonts"]
+    nature:
+      ratio: '16:10'
+      lib_dir: libs
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+---
+
+class: clear
+
+
+```{css echo=FALSE}
+.custom-left {
+float: left;
+width: 62%;
+}
+.custom-right {
+float: right;
+width: 38%;
+}
+
+.divider-line {
+  height: 1px;
+  width: 600px;
+  background-color: #1A1A2E;
+  margin: 30px 0;
+  clear: both;
+}
+
+
+```
+
+
+
+
+
+.custom-left[
+
+## Inteligência artificial aplicada à dimensão pedológica global para modelar, mapear e compreender interações biota-solo-clima e dinâmicas do carbono orgânico
+
+<div class="divider-line"></div>
+
+<div style="position: absolute; bottom: 30px; left: 30px;">
+<img src="./img/logos.png" height="60px">
+</div>
+
+**Doutorando:** Cássio Moquedace  
+**Orientador:** Elpídio Inácio Fernandes Filho  
+**Coorientadores:** Lucas Gomes; Rodrigo Vargas
+]
+
+.custom-right[
+<img src="./img/capa.jpg" style="max-width: 100%; border-radius: 10px;" />
+]
+
+<div style="position: absolute; bottom: 30px; left: 30px;">
+<img src="./img/logos.png" height="60px">
+</div>
+
+
+---
+
+class: sumario-slide
+
+<style>
+.sumario-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.sumario-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Sumário
+
+.pull-left[
+- Introdução geral  
+- Objetivo geral  
+- Material e métodos
+- Resultados artigo 1  
+- Resultados artigo 2  
+- Resultados artigo 3  
+- Resultados artigo 4  
+- Conclusão  geral
+- Referências
+]
+
+
+.pull-right[
+<img src="./img/summary.png" style="width: 75%; border-radius: 10px;" />
+]
+
+
+---
+
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul li {
+font-size: 1em;
+line-height: 1.6;
+margin-bottom: 0.4em;
+}
+
+</style>
+
+# Introdução
+
+- Solo é base da produção de alimentos, regulação climática e biodiversidade
+
+--
+
+- Armazena mais carbono orgânico que atmosfera e biomassa juntas (1.460–1.550 Pg)
+
+--
+
+- Está degradado em 33% da superfície global
+
+--
+
+- Raízes, fungos e respiração do solo são motores biológicos centrais do ciclo do carbono
+
+--
+
+- Negligenciados em modelos globais, que priorizam clima e vegetação
+
+
+---
+
+class: topic-slide
+
+
+# Introdução
+
+- Modelos tradicionais requerem pressupostos (ex.: normalidade)
+
+--
+
+- Amostragem limitada (falta de dados)
+
+
+
+---
+
+
+class: slide-hoogen_2019
+
+<style>
+.slide-hoogen_2019 {
+background-image: url("./img/hoogen_2019.png");
+background-size: 50%;
+background-position: 98% 80%;
+background-repeat: no-repeat;
+}
+
+.slide-hoogen_2019 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-hoogen_2019 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+
+
+# Introdução
+
+## Soil nematode abundance and functional group composition at a global scale
+
+
+### *van den Hoogen et al. (2019) | *[<u>*DOI: 10.1038/s41586-019-1418-6*</u>](https://doi.org/10.1038/s41586-019-1418-6)
+
+
+- **Nature**
+- Machine learning (Random forest)
+- Abundância total e por grupos tróficos<br>de nematoides do solo
+- 6759 amostras / <u>1876 agregadas</u>
+
+
+
+---
+
+
+class: slide-huang_2020
+
+<style>
+.slide-huang_2020 {
+background-image: url("./img/huang_2020.png");
+background-size: 57%;
+background-position: 92% 96%;
+background-repeat: no-repeat;
+}
+
+.slide-huang_2020 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-huang_2020 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+
+
+# Introdução
+
+## Spatial and temporal variations in global soil respiration and their relationships with climate and land cover
+
+
+
+
+### *Huang et al. (2020) | *[<u>*DOI: 10.1126/sciadv.abb8508*</u>](https://doi.org/10.1126/sciadv.abb8508)
+
+
+- **Science Advances**
+- Machine learning (Random forest | SVM)
+- Respiração do solo (Rs)
+- 1292 amostras / <u>701 locais</u>
+
+
+---
+
+
+
+class: slide-baquerizo_2018
+
+<style>
+.slide-baquerizo_2018 {
+background-image: url("./img/baquerizo_2018.png");
+background-size: 60%;
+background-position: 87% 99%;
+background-repeat: no-repeat;
+}
+
+.slide-baquerizo_2018 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-baquerizo_2018 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+
+
+# Introdução
+
+## A global atlas of the dominant bacteria found in soil
+
+
+### *Delgado-Baquerizo et al. (2018) | *[<u>*DOI: 10.1126/science.aap9516*</u>](https://doi.org/10.1126/science.aap9516)
+
+- **Science**
+- Machine learning (random forest)
+- Preferência ambiental e distribuição de filotipos bacterianos dominantes do solo
+- <u>237 amostras</u>
+
+
+
+---
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Introdução
+
+- Modelos tradicionais requerem pressupostos (ex.: normalidade)
+
+- Amostragem limitada (falta de dados)
+
+- Machine Learning: (>) acurácia, (<) explicabilidade (“caixa-preta”)
+
+--
+
+- Inteligência artificial explicável permite identificar e interpretar variáveis funcionais
+
+--
+
+- A proposta do *Soil Science-Informed ML*: unir dados, pedologia, biologia e ecologia para modelos mais robustos
+
+--
+
+- IA ferramenta preditiva ?
+
+
+---
+
+class: obj-slide
+
+<style>
+.obj-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.obj-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+
+
+# Objetivo
+
+.custom-left[
+
+- Desenvolver uma abordagem funcional e explicável, baseada em inteligência artificial, para modelar e compreender a dinâmica do carbono orgânico do solo (SOC) em escala global, com foco nos preditores biológicos: fungos, raízes e respiração
+]
+
+.custom-right[
+<img src="./img/objective.png" style="max-width: 100%; border-radius: 10px;" />
+]
+
+
+
+---
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Artigos
+
+
+### 1. Fungos do solo em escala global: implicações ecológicas e funcionais para a saúde do solo
+
+--
+
+### 2. Mapeamento global de traços funcionais de raízes: insights sobre dinâmicas edáficas e climáticas
+
+--
+
+### 3. Aprendizado de máquina e dados pedológicos: perspectivas mais realistas para a modelagem da respiração do solo e feedbacks carbono-clima
+
+--
+
+### 4. Interações solo–biota–clima e explicabilidade em modelos globais de SOC
+
+
+---
+
+class: inverse, center, middle
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+# Material e métodos
+
+
+---
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+
+
+<div style="text-align: center;">
+
+<img src="./img/legacy_data.png" style="max-width: 30%; border-radius: 10px;" />
+
+</div>
+
+---
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Material e métodos
+
+## Banco de dados legado (amostras)
+
+--
+
+- Global Soil Mycobiome (GSM) - ([<u>Tedersoo et al., 2021</u>](https://doi.org/10.1007/s13225-021-00493-7))
+
+--
+
+- Global Root Traits Database (GRooT) - ([<u>Guerrero-Ramírez et al., 2021</u>](https://doi.org/10.1111/geb.13179))
+
+--
+
+- Soil Respiration Database (SRDB-V5) - ([<u>Jian et al., 2021</u>](https://doi.org/10.5194/essd-13-255-2021))
+
+--
+
+- World Soil Information Service (WoSIS) & Global Soil Organic Carbon Stock dataset after Land Use and Land Cover Change (GSOCS-LULCC) - ([<u>Calisto et al., 2023</u>](https://doi.org/10.17027/isric-wdcsoils-20231130); [<u>Chen et al., 2024</u>](https://doi.org/10.5194/essd-2024-373))
+
+
+
+---
+
+
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+- Variáveis explicativas contínuos no espaço (preditores ambientais)
+
+
+<div style="text-align: center;">
+
+<img src="./img/map_cova.png" style="max-width: 30%; border-radius: 10px;" />
+
+<img src="./img/x1.png" style="max-width: 15%; border-radius: 10px;" />
+
+</div>
+
+---
+class: topic-slide-var
+
+<style>
+.topic-slide-var h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide-var h2 {
+font-size: 1.5em;
+text-align: left;
+}
+
+.topic-slide-var h3 {
+font-size: 1.25em;
+text-align: left;
+}
+
+.topic-slide-var ul {
+font-size: 0.9em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Material e métodos
+
+## Variáveis explicativas contínuos no espaço (preditores ambientais)
+
+--
+
+.pull-left[
+
+### Artigo 1, 3 e 3
+#### Climate
+
+- Temperatura média anual, Amplitude térmica média diária, Isotermalidade...
+
+
+#### Organisms
+
+- Altura do dossel, Produção primária bruta, Índice de área foliar...
+
+
+#### Soil / Parent Material (PM)
+- Capacidade de troca de cátions, Teor de argila, Caulinita...
+
+]
+
+--
+
+.pull-right[
+### Artigo 4
+
+#### Climatic conditions
+
+- Temperatura média anual e Precipitação Anual
+
+
+#### Fungal attributes
+
+- Riqueza e Abundância de fungos no solo a 5cm
+
+
+#### Root traits
+
+- Traços funcionais das raízes
+
+
+#### Soil properties
+
+- Teor de argila, areia, pH, N-total...
+
+
+#### Topographic attribute
+
+- Modelo digital de elevação
+
+
+]
+
+
+
+
+
+---
+
+
+class: topic-slide
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+</style>
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+- Variáveis explicativas contínuos no espaço (preditores ambientais)
+- Modelagem espacial
+
+---
+class: topic-slide-g1
+
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+.img-right-top {
+position: absolute;
+top: 90px;
+right: 70px;
+width: 300px;
+}
+</style>
+
+# Material e métodos
+
+## Modelagem espacial
+
+### Vias da modelagem
+
+<img src="img/model.png" class="img-right-top" />
+
+--
+
+- Modelo global (todas amostras)
+
+--
+
+- Modelo performance (separação de dados 70% / 30%) | 100 x
+
+--
+
+### Ajuste do modelo
+
+--
+
+.pull-left[
+#### Seleção de variáveis
+
+- Correlação > |0,95|
+
+- Importância (Recursive Feature Elimination)
+
+]
+
+--
+
+.pull-right[
+
+#### Model tuning
+
+
+- Quantile random forest (qrf)
+
+- Validação cruzada repetida (10 folds)
+
+- Otimização `mtry`
+
+]
+
+---
+
+class: topic-slide-g
+
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+</style>
+
+# Material e métodos
+
+
+.pull-left[
+
+
+
+
+## Modelagem espacial
+
+### Ajuste do modelo
+#### Model tuning
+- Quantile random forest (qrf)
+- Validação cruzada repetida (10 folds)
+- Otimização `mtry`
+- Métricas de avaliação:
+]
+--
+.pull-right[
+$$
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \left| P_i - O_i \right|
+$$
+
+
+
+
+$$
+\rho_c = \frac{2p \, \sigma_x \sigma_y}
+{\sigma_x^2 + \sigma_y^2 + (\mu_x - \mu_y)^2}
+$$
+
+
+
+$$
+\text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - O_i)^2 }
+$$
+]
+
+Em que: *n* representa o número de amostras; <strong>ρ<sub>c</sub></strong> é o coeficiente de correlação entre as duas variáveis, <strong>μ<sub>x</sub></strong> e <strong>μ<sub>y</sub></strong> são as médias para as duas variáveis, <strong>σ<sub>x</sub><sup>2</sup></strong> e <strong>σ<sub>y</sub><sup>2</sup></strong> são as variâncias correspondentes; <strong>P<sub>i</sub></strong> e <strong>O<sub>i</sub></strong> representam os valores previstos e observados no local *i*, respectivamente.
+
+--
+
+- Modelo nulo
+
+---
+class: topic-slide-g
+
+
+<style>
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+</style>
+
+# Material e métodos
+
+## Modelagem espacial
+
+### Ajuste do modelo
+#### Avaliação de incerteza
+- Mapa desvio padrão
+- Mapa índice de dissimilaridade ([<u>Meyer & Pebesma, 2021</u>](https://doi.org/10.1111/2041-210X.13650))
+
+<div style="text-align: center;">
+
+<img src="./img/accuracy.png" style="max-width: 30%; border-radius: 10px;" />
+
+</div>
+
+---
+```{css echo=FALSE}
+.custom-left-r0 {
+float: left;
+width: 50%;
+}
+.custom-right-r0 {
+float: right;
+width: 50%;
+}
+```
+
+.custom-left-r0[
+
+# Material e métodos
+## Modelagem espacial
+
+### Importância das variáveis
+- Importância global (permutação)
+
+
+#### Artigo 4 (Estoque de carbono)
+- Importância global (permutação e Shapley)
+- Dependência parcial
+- Dominância espacial (Shapley) - ([<u>Shapley, 1953</u>](https://www.rand.org/content/dam/rand/pubs/papers/2021/P295.pdf))
+
+]
+
+.custom-right-r0[
+<div style="text-align: center;">
+
+<img src="./img/importance.png" style="max-width: 50%; border-radius: 10px;" />
+
+</div>
+]
+
+---
+class: inverse, center, middle
+
+
+
+
+# Artigo 1<br>Fungos do solo em escala global: implicações ecológicas e funcionais para a saúde do solo<br><br>Resultados
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+---
+
+
+# Artigo 1
+
+```{css echo=FALSE}
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+```
+
+.custom-left-r1[
+- Fungos estruturam o solo e estabilizam o carbono — mas sua distribuição global segue pouco compreendida
+- A distribuição fúngica global é desbalanceada: zonas-chave como trópicos e áridos seguem subamostradas, gerando incertezas críticas
+- A interação entre riqueza e abundância foi modulada por clima e textura do solo
+- Fatores edafoclimáticos, como pH, teor de argila e precipitação, mostraram-se preditores-chave
+- Tropical úmido × desertos: extremos funcionais com estratégias distintas
+
+]
+
+.custom-right-r1[
+
+<div style="text-align: center;">
+<img src="./img/en_ab_ri_fixed.png" style="max-width: 100%; border-radius: 10px;" />
+
+<img src="./img/en_map_bivar_richness_abund.png" style="max-width: 100%; border-radius: 10px;" />
+
+</div>
+
+]
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 2<br>Mapeamento global de traços funcionais de raízes: insights sobre dinâmicas edáficas e climáticas<br><br>Resultados
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+---
+
+# Artigo 2
+
+```{css echo=FALSE}
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+```
+
+
+- Inovação no mapeamento global de traços radiculares
+- Estratégias radiculares refletem padrões biogeográficos
+- Raízes como eixo central da respiração e do fluxo de carbono
+- Maiores incertezas em trópicos e regiões áridas
+- Ampliar amostras e incluir novos traços é fundamental
+
+.custom-left-r1[
+
+<div style="text-align: center;">
+<img src="./img/rcc.png" style="max-width: 90%; border-radius: 10px;" />
+<img src="./img/rmc.png" style="max-width: 90%; border-radius: 10px;" />
+
+</div>
+
+]
+
+.custom-right-r1[
+
+<div style="text-align: center;">
+<img src="./img/rtr.png" style="max-width: 90%; border-radius: 10px;" />
+<img src="./img/srr.png" style="max-width: 90%; border-radius: 10px;" />
+
+</div>
+
+
+]
+
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 3<br>Aprendizado de máquina e dados pedológicos: perspectivas mais realistas para a modelagem da respiração do solo e feedbacks carbono-clima<br><br>Resultados
+
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+
+---
+
+
+# Artigo 3
+
+```{css echo=FALSE}
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+```
+
+.custom-left-r1[
+- Rs e Rh devem diminuir nos trópicos e aumentar nas altas latitudes
+- Precipitação e textura do solo são controladores-chave da resposta
+- Solos argilosos estabilizam SOC; arenosos o tornam vulnerável
+- Modelos tradicionais superestimam Rs e subestimam Rh ao ignorar propriedades do solo
+- Ampliar dados e integrar variáveis edáficas é fundamental para reduzir incertezas
+
+
+]
+
+.custom-right-r1[
+
+<div style="text-align: center;">
+<img src="./img/rs_rh.jpg" style="max-width: 100%; border-radius: 10px;" />
+
+<img src="./img/gg_group_delta_cs_ss_clay_temp.png" style="max-width: 80%; border-radius: 10px;" />
+
+</div>
+
+]
+
+
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 4<br>Interações solo–biota–clima e explicabilidade em modelos globais de SOC<br><br>Resultados
+
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+
+
+---
+
+
+
+
+# Artigo 4
+
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+
+
+<div style="text-align: center;">
+<img src="./img/ped_obs_soc_stock.png" style="max-width: 100%; border-radius: 10px;" />
+
+</div>
+
+
+
+---
+
+# Artigo 4
+
+```{css echo=FALSE}
+.custom-left-r3 {
+float: left;
+width: 45%;
+}
+.custom-right-r3 {
+float: right;
+width: 55%;
+}
+```
+
+.custom-left-r3[
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+]
+
+.custom-right-r3[
+
+<div style="text-align: center;">
+<img src="./img/gg_dp_partial_bar.png" style="max-width: 100%; border-radius: 10px;" />
+
+</div>
+
+]
+
+---
+
+
+
+
+# Artigo 4
+
+```{css echo=FALSE}
+.custom-left-r2 {
+float: left;
+width: 55%;
+}
+.custom-right-r2 {
+float: right;
+width: 45%;
+}
+```
+
+.custom-left-r2[
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+]
+
+.custom-right-r2[
+
+<div style="text-align: center;">
+<img src="./img/map_full.png" style="max-width: 100%; border-radius: 10px;" />
+
+</div>
+
+]
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Conclusão Geral
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+---
+
+```{css echo=FALSE}
+.custom-left-r4 {
+float: left;
+width: 65%;
+}
+.custom-right-r4 {
+float: right;
+width: 35%;
+}
+```
+
+# Conclusão Geral
+
+
+
+.custom-left-r4[
+
+- Raízes estruturam a rizosfera e regulam a ciclagem de C e nutrientes  
+- Solos argilosos reduzem a sensibilidade climática; arenosos amplificam riscos  
+- IA explicável revelou novos controladores funcionais (ex.: RMC)  
+- Interações não lineares entre solo, clima e biota exigem abordagem integrada  
+- Limitações: escassez de dados robustos em regiões críticas (trópicos e áridas)  
+- SSP5-8.5 agrava riscos em solos frágeis de altas latitudes  
+- É urgente padronizar dados, integrar biologia e adotar modelos interpretáveis  
+- Solo como eixo para biodiversidade, clima e resiliência dos ecossistemas 
+
+]
+
+.custom-right-r4[
+
+<div style="text-align: center;">
+
+<img src="./img/soil_bio.png" style="max-width: 100%; border-radius: 10px;" />
+
+</div>
+]
+
+
+---
+
+class: inverse, center, middle
+
+# Referências
+
+
+<html>
+<head>
+  <style>
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <hr class="custom-line">
+</body>
+</html>
+
+---
+
+# Referências
+
+Chen, S., Shuai, Q., Arrouays, D., Chen, Z., Dai, L., Hong, Y., Hu, B., Huang, Y., Ji, W., Li, S., Liang, Z., Ma, Y., Richer-de-Forges, A. C., Schillaci, C., Su, Y., Teng, H., Wang, N., Wang, X., Wang, Y., … Shi, Z. (2024). *GSOCS-LULCC: The Global Soil Organic Carbon Stock dataset after Land Use and Land Cover Change*. https://doi.org/10.5194/essd-2024-373
+
+Calisto, L., Sousa, L. M., & Batjes, N. H. (2023). *Standardised soil profile data for the world (WoSIS snapshot – December 2023)* (Vol. 10). ISRIC Data Hub. https://doi.org/10.17027/isric-wdcsoils-20231130
+
+Guerrero-Ramírez, N. R., Mommer, L., Freschet, G. T., Iversen, C. M., McCormack, M. L., Kattge, J., Poorter, H., van der Plas, F., Bergmann, J., Kuyper, T. W., York, L. M., Bruelheide, H., Laughlin, D. C., Meier, I. C., Roumet, C., Semchenko, M., Sweeney, C. J., van Ruijven, J., Valverde-Barrantes, O. J., … Weigelt, A. (2021). Global root traits (GRooT) database. *Global Ecology and Biogeography, 30*(1), 25–37. https://doi.org/10.1111/geb.13179
+
+Jian, J., Vargas, R., Anderson-Teixeira, K., Stell, E., Herrmann, V., Horn, M., Kholod, N., Manzon, J., Marchesi, R., Paredes, D., & Bond-Lamberty, B. (2021). A restructured and updated global soil respiration database (SRDB-V5). *Earth System Science Data, 13*(2), 255–267. https://doi.org/10.5194/essd-13-255-2021
+
+Tedersoo, L., Mikryukov, V., Anslan, S., Bahram, M., Khalid, A. N., Corrales, A., Agan, A., Vasco-Palacios, A. M., Saitta, A., Antonelli, A., Rinaldi, A. C., Verbeken, A., Sulistyo, B. P., Tamgnoue, B., Furneaux, B., Ritter, C. D., Nyamukondiwa, C., Sharp, C., Marín, C., … Abarenkov, K. (2021). The Global Soil Mycobiome consortium dataset for boosting fungal diversity research. *Fungal Diversity, 111*(1), 573–588. https://doi.org/10.1007/s13225-021-00493-7
+
+
+
+
+---
+
+background-image: url("./img/agrad.png")
+background-size: 100%
+background-position: center
+class: clear
+
+
+<div style="position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
+Agradecimentos
+</div>
+

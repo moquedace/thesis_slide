@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>index.knit</title>
+    <meta charset="utf-8" />
+    <script src="index_files/header-attrs-2.29/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: clear
+
+
+&lt;style type="text/css"&gt;
+.custom-left {
+float: left;
+width: 62%;
+}
+.custom-right {
+float: right;
+width: 38%;
+}
+
+.divider-line {
+  height: 1px;
+  width: 600px;
+  background-color: #1A1A2E;
+  margin: 30px 0;
+  clear: both;
+}
+
+
+&lt;/style&gt;
+
+
+
+
+
+.custom-left[
+
+## Inteligência artificial aplicada à dimensão pedológica global para modelar, mapear e compreender interações biota-solo-clima e dinâmicas do carbono orgânico
+
+&lt;div class="divider-line"&gt;&lt;/div&gt;
+
+&lt;div style="position: absolute; bottom: 30px; left: 30px;"&gt;
+&lt;img src="./img/logos.png" height="60px"&gt;
+&lt;/div&gt;
+
+**Doutorando:** Cássio Moquedace  
+**Orientador:** Elpídio Inácio Fernandes Filho  
+**Coorientadores:** Lucas Gomes; Rodrigo Vargas
+]
+
+.custom-right[
+&lt;img src="./img/capa.jpg" style="max-width: 100%; border-radius: 10px;" /&gt;
+]
+
+&lt;div style="position: absolute; bottom: 30px; left: 30px;"&gt;
+&lt;img src="./img/logos.png" height="60px"&gt;
+&lt;/div&gt;
+
+
+---
+
+class: sumario-slide
+
+&lt;style&gt;
+.sumario-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.sumario-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Sumário
+
+.pull-left[
+- Introdução geral  
+- Objetivo geral  
+- Material e métodos
+- Resultados artigo 1  
+- Resultados artigo 2  
+- Resultados artigo 3  
+- Resultados artigo 4  
+- Conclusão  geral
+- Referências
+]
+
+
+.pull-right[
+&lt;img src="./img/summary.png" style="width: 75%; border-radius: 10px;" /&gt;
+]
+
+
+---
+
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul li {
+font-size: 1em;
+line-height: 1.6;
+margin-bottom: 0.4em;
+}
+
+&lt;/style&gt;
+
+# Introdução
+
+- Solo é base da produção de alimentos, regulação climática e biodiversidade
+
+--
+
+- Armazena mais carbono orgânico que atmosfera e biomassa juntas (1.460–1.550 Pg)
+
+--
+
+- Está degradado em 33% da superfície global
+
+--
+
+- Raízes, fungos e respiração do solo são motores biológicos centrais do ciclo do carbono
+
+--
+
+- Negligenciados em modelos globais, que priorizam clima e vegetação
+
+
+---
+
+class: topic-slide
+
+
+# Introdução
+
+- Modelos tradicionais requerem pressupostos (ex.: normalidade)
+
+--
+
+- Amostragem limitada (falta de dados)
+
+
+
+---
+
+
+class: slide-hoogen_2019
+
+&lt;style&gt;
+.slide-hoogen_2019 {
+background-image: url("./img/hoogen_2019.png");
+background-size: 50%;
+background-position: 98% 80%;
+background-repeat: no-repeat;
+}
+
+.slide-hoogen_2019 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-hoogen_2019 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+
+
+# Introdução
+
+## Soil nematode abundance and functional group composition at a global scale
+
+
+### *van den Hoogen et al. (2019) | *[&lt;u&gt;*DOI: 10.1038/s41586-019-1418-6*&lt;/u&gt;](https://doi.org/10.1038/s41586-019-1418-6)
+
+
+- **Nature**
+- Machine learning (Random forest)
+- Abundância total e por grupos tróficos&lt;br&gt;de nematoides do solo
+- 6759 amostras / &lt;u&gt;1876 agregadas&lt;/u&gt;
+
+
+
+---
+
+
+class: slide-huang_2020
+
+&lt;style&gt;
+.slide-huang_2020 {
+background-image: url("./img/huang_2020.png");
+background-size: 57%;
+background-position: 92% 96%;
+background-repeat: no-repeat;
+}
+
+.slide-huang_2020 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-huang_2020 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+
+
+# Introdução
+
+## Spatial and temporal variations in global soil respiration and their relationships with climate and land cover
+
+
+
+
+### *Huang et al. (2020) | *[&lt;u&gt;*DOI: 10.1126/sciadv.abb8508*&lt;/u&gt;](https://doi.org/10.1126/sciadv.abb8508)
+
+
+- **Science Advances**
+- Machine learning (Random forest | SVM)
+- Respiração do solo (Rs)
+- 1292 amostras / &lt;u&gt;701 locais&lt;/u&gt;
+
+
+---
+
+
+
+class: slide-baquerizo_2018
+
+&lt;style&gt;
+.slide-baquerizo_2018 {
+background-image: url("./img/baquerizo_2018.png");
+background-size: 60%;
+background-position: 87% 99%;
+background-repeat: no-repeat;
+}
+
+.slide-baquerizo_2018 h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.slide-baquerizo_2018 ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+
+
+# Introdução
+
+## A global atlas of the dominant bacteria found in soil
+
+
+### *Delgado-Baquerizo et al. (2018) | *[&lt;u&gt;*DOI: 10.1126/science.aap9516*&lt;/u&gt;](https://doi.org/10.1126/science.aap9516)
+
+- **Science**
+- Machine learning (random forest)
+- Preferência ambiental e distribuição de filotipos bacterianos dominantes do solo
+- &lt;u&gt;237 amostras&lt;/u&gt;
+
+
+
+---
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Introdução
+
+- Modelos tradicionais requerem pressupostos (ex.: normalidade)
+
+- Amostragem limitada (falta de dados)
+
+- Machine Learning: (&gt;) acurácia, (&lt;) explicabilidade (“caixa-preta”)
+
+--
+
+- Inteligência artificial explicável permite identificar e interpretar variáveis funcionais
+
+--
+
+- A proposta do *Soil Science-Informed ML*: unir dados, pedologia, biologia e ecologia para modelos mais robustos
+
+--
+
+- IA ferramenta preditiva ?
+
+
+---
+
+class: obj-slide
+
+&lt;style&gt;
+.obj-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.obj-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+
+
+# Objetivo
+
+.custom-left[
+
+- Desenvolver uma abordagem funcional e explicável, baseada em inteligência artificial, para modelar e compreender a dinâmica do carbono orgânico do solo (SOC) em escala global, com foco nos preditores biológicos: fungos, raízes e respiração
+]
+
+.custom-right[
+&lt;img src="./img/objective.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+]
+
+
+
+---
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Artigos
+
+
+### 1. Fungos do solo em escala global: implicações ecológicas e funcionais para a saúde do solo
+
+--
+
+### 2. Mapeamento global de traços funcionais de raízes: insights sobre dinâmicas edáficas e climáticas
+
+--
+
+### 3. Aprendizado de máquina e dados pedológicos: perspectivas mais realistas para a modelagem da respiração do solo e feedbacks carbono-clima
+
+--
+
+### 4. Interações solo–biota–clima e explicabilidade em modelos globais de SOC
+
+
+---
+
+class: inverse, center, middle
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+# Material e métodos
+
+
+---
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+
+
+&lt;div style="text-align: center;"&gt;
+
+&lt;img src="./img/legacy_data.png" style="max-width: 30%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+---
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Banco de dados legado (amostras)
+
+--
+
+- Global Soil Mycobiome (GSM) - ([&lt;u&gt;Tedersoo et al., 2021&lt;/u&gt;](https://doi.org/10.1007/s13225-021-00493-7))
+
+--
+
+- Global Root Traits Database (GRooT) - ([&lt;u&gt;Guerrero-Ramírez et al., 2021&lt;/u&gt;](https://doi.org/10.1111/geb.13179))
+
+--
+
+- Soil Respiration Database (SRDB-V5) - ([&lt;u&gt;Jian et al., 2021&lt;/u&gt;](https://doi.org/10.5194/essd-13-255-2021))
+
+--
+
+- World Soil Information Service (WoSIS) &amp; Global Soil Organic Carbon Stock dataset after Land Use and Land Cover Change (GSOCS-LULCC) - ([&lt;u&gt;Calisto et al., 2023&lt;/u&gt;](https://doi.org/10.17027/isric-wdcsoils-20231130); [&lt;u&gt;Chen et al., 2024&lt;/u&gt;](https://doi.org/10.5194/essd-2024-373))
+
+
+
+---
+
+
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+- Variáveis explicativas contínuos no espaço (preditores ambientais)
+
+
+&lt;div style="text-align: center;"&gt;
+
+&lt;img src="./img/map_cova.png" style="max-width: 30%; border-radius: 10px;" /&gt;
+
+&lt;img src="./img/x1.png" style="max-width: 15%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+---
+class: topic-slide-var
+
+&lt;style&gt;
+.topic-slide-var h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide-var h2 {
+font-size: 1.5em;
+text-align: left;
+}
+
+.topic-slide-var h3 {
+font-size: 1.25em;
+text-align: left;
+}
+
+.topic-slide-var ul {
+font-size: 0.9em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Variáveis explicativas contínuos no espaço (preditores ambientais)
+
+--
+
+.pull-left[
+
+### Artigo 1, 3 e 3
+#### Climate
+
+- Temperatura média anual, Amplitude térmica média diária, Isotermalidade...
+
+
+#### Organisms
+
+- Altura do dossel, Produção primária bruta, Índice de área foliar...
+
+
+#### Soil / Parent Material (PM)
+- Capacidade de troca de cátions, Teor de argila, Caulinita...
+
+]
+
+--
+
+.pull-right[
+### Artigo 4
+
+#### Climatic conditions
+
+- Temperatura média anual e Precipitação Anual
+
+
+#### Fungal attributes
+
+- Riqueza e Abundância de fungos no solo a 5cm
+
+
+#### Root traits
+
+- Traços funcionais das raízes
+
+
+#### Soil properties
+
+- Teor de argila, areia, pH, N-total...
+
+
+#### Topographic attribute
+
+- Modelo digital de elevação
+
+
+]
+
+
+
+
+
+---
+
+
+class: topic-slide
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+.topic-slide ul {
+font-size: 1.5em;
+line-height: 1.8;
+padding-left: 40px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Estrutura
+
+- Banco de dados legado (amostras)
+- Variáveis explicativas contínuos no espaço (preditores ambientais)
+- Modelagem espacial
+
+---
+class: topic-slide-g1
+
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+.img-right-top {
+position: absolute;
+top: 90px;
+right: 70px;
+width: 300px;
+}
+&lt;/style&gt;
+
+# Material e métodos
+
+## Modelagem espacial
+
+### Vias da modelagem
+
+&lt;img src="img/model.png" class="img-right-top" /&gt;
+
+--
+
+- Modelo global (todas amostras)
+
+--
+
+- Modelo performance (separação de dados 70% / 30%) | 100 x
+
+--
+
+### Ajuste do modelo
+
+--
+
+.pull-left[
+#### Seleção de variáveis
+
+- Correlação &gt; |0,95|
+
+- Importância (Recursive Feature Elimination)
+
+]
+
+--
+
+.pull-right[
+
+#### Model tuning
+
+
+- Quantile random forest (qrf)
+
+- Validação cruzada repetida (10 folds)
+
+- Otimização `mtry`
+
+]
+
+---
+
+class: topic-slide-g
+
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+&lt;/style&gt;
+
+# Material e métodos
+
+
+.pull-left[
+
+
+
+
+## Modelagem espacial
+
+### Ajuste do modelo
+#### Model tuning
+- Quantile random forest (qrf)
+- Validação cruzada repetida (10 folds)
+- Otimização `mtry`
+- Métricas de avaliação:
+]
+--
+.pull-right[
+$$
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \left| P_i - O_i \right|
+$$
+
+
+
+
+$$
+\rho_c = \frac{2p \, \sigma_x \sigma_y}
+{\sigma_x^2 + \sigma_y^2 + (\mu_x - \mu_y)^2}
+$$
+
+
+
+$$
+\text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - O_i)^2 }
+$$
+]
+
+Em que: *n* representa o número de amostras; &lt;strong&gt;ρ&lt;sub&gt;c&lt;/sub&gt;&lt;/strong&gt; é o coeficiente de correlação entre as duas variáveis, &lt;strong&gt;μ&lt;sub&gt;x&lt;/sub&gt;&lt;/strong&gt; e &lt;strong&gt;μ&lt;sub&gt;y&lt;/sub&gt;&lt;/strong&gt; são as médias para as duas variáveis, &lt;strong&gt;σ&lt;sub&gt;x&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/strong&gt; e &lt;strong&gt;σ&lt;sub&gt;y&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/strong&gt; são as variâncias correspondentes; &lt;strong&gt;P&lt;sub&gt;i&lt;/sub&gt;&lt;/strong&gt; e &lt;strong&gt;O&lt;sub&gt;i&lt;/sub&gt;&lt;/strong&gt; representam os valores previstos e observados no local *i*, respectivamente.
+
+--
+
+- Modelo nulo
+
+---
+class: topic-slide-g
+
+
+&lt;style&gt;
+.topic-slide h1 {
+font-size: 2.5em;
+text-align: left;
+}
+
+&lt;/style&gt;
+
+# Material e métodos
+
+## Modelagem espacial
+
+### Ajuste do modelo
+#### Avaliação de incerteza
+- Mapa desvio padrão
+- Mapa índice de dissimilaridade ([&lt;u&gt;Meyer &amp; Pebesma, 2021&lt;/u&gt;](https://doi.org/10.1111/2041-210X.13650))
+
+&lt;div style="text-align: center;"&gt;
+
+&lt;img src="./img/accuracy.png" style="max-width: 30%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+---
+&lt;style type="text/css"&gt;
+.custom-left-r0 {
+float: left;
+width: 50%;
+}
+.custom-right-r0 {
+float: right;
+width: 50%;
+}
+&lt;/style&gt;
+
+.custom-left-r0[
+
+# Material e métodos
+## Modelagem espacial
+
+### Importância das variáveis
+- Importância global (permutação)
+
+
+#### Artigo 4 (Estoque de carbono)
+- Importância global (permutação e Shapley)
+- Dependência parcial
+- Dominância espacial (Shapley) - ([&lt;u&gt;Shapley, 1953&lt;/u&gt;](https://www.rand.org/content/dam/rand/pubs/papers/2021/P295.pdf))
+
+]
+
+.custom-right-r0[
+&lt;div style="text-align: center;"&gt;
+
+&lt;img src="./img/importance.png" style="max-width: 50%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+]
+
+---
+class: inverse, center, middle
+
+
+
+
+# Artigo 1&lt;br&gt;Fungos do solo em escala global: implicações ecológicas e funcionais para a saúde do solo&lt;br&gt;&lt;br&gt;Resultados
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+---
+
+
+# Artigo 1
+
+&lt;style type="text/css"&gt;
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+&lt;/style&gt;
+
+.custom-left-r1[
+- Fungos estruturam o solo e estabilizam o carbono — mas sua distribuição global segue pouco compreendida
+- A distribuição fúngica global é desbalanceada: zonas-chave como trópicos e áridos seguem subamostradas, gerando incertezas críticas
+- A interação entre riqueza e abundância foi modulada por clima e textura do solo
+- Fatores edafoclimáticos, como pH, teor de argila e precipitação, mostraram-se preditores-chave
+- Tropical úmido × desertos: extremos funcionais com estratégias distintas
+
+]
+
+.custom-right-r1[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/en_ab_ri_fixed.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;img src="./img/en_map_bivar_richness_abund.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+]
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 2&lt;br&gt;Mapeamento global de traços funcionais de raízes: insights sobre dinâmicas edáficas e climáticas&lt;br&gt;&lt;br&gt;Resultados
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+---
+
+# Artigo 2
+
+&lt;style type="text/css"&gt;
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+&lt;/style&gt;
+
+
+- Inovação no mapeamento global de traços radiculares
+- Estratégias radiculares refletem padrões biogeográficos
+- Raízes como eixo central da respiração e do fluxo de carbono
+- Maiores incertezas em trópicos e regiões áridas
+- Ampliar amostras e incluir novos traços é fundamental
+
+.custom-left-r1[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/rcc.png" style="max-width: 90%; border-radius: 10px;" /&gt;
+&lt;img src="./img/rmc.png" style="max-width: 90%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+]
+
+.custom-right-r1[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/rtr.png" style="max-width: 90%; border-radius: 10px;" /&gt;
+&lt;img src="./img/srr.png" style="max-width: 90%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+
+]
+
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 3&lt;br&gt;Aprendizado de máquina e dados pedológicos: perspectivas mais realistas para a modelagem da respiração do solo e feedbacks carbono-clima&lt;br&gt;&lt;br&gt;Resultados
+
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+---
+
+
+# Artigo 3
+
+&lt;style type="text/css"&gt;
+.custom-left-r1 {
+float: left;
+width: 50%;
+}
+.custom-right-r1 {
+float: right;
+width: 50%;
+}
+&lt;/style&gt;
+
+.custom-left-r1[
+- Rs e Rh devem diminuir nos trópicos e aumentar nas altas latitudes
+- Precipitação e textura do solo são controladores-chave da resposta
+- Solos argilosos estabilizam SOC; arenosos o tornam vulnerável
+- Modelos tradicionais superestimam Rs e subestimam Rh ao ignorar propriedades do solo
+- Ampliar dados e integrar variáveis edáficas é fundamental para reduzir incertezas
+
+
+]
+
+.custom-right-r1[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/rs_rh.jpg" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;img src="./img/gg_group_delta_cs_ss_clay_temp.png" style="max-width: 80%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+]
+
+
+
+
+---
+class: inverse, center, middle
+
+
+# Artigo 4&lt;br&gt;Interações solo–biota–clima e explicabilidade em modelos globais de SOC&lt;br&gt;&lt;br&gt;Resultados
+
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+---
+
+
+
+
+# Artigo 4
+
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/ped_obs_soc_stock.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+
+
+---
+
+# Artigo 4
+
+&lt;style type="text/css"&gt;
+.custom-left-r3 {
+float: left;
+width: 45%;
+}
+.custom-right-r3 {
+float: right;
+width: 55%;
+}
+&lt;/style&gt;
+
+.custom-left-r3[
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+]
+
+.custom-right-r3[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/gg_dp_partial_bar.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+]
+
+---
+
+
+
+
+# Artigo 4
+
+&lt;style type="text/css"&gt;
+.custom-left-r2 {
+float: left;
+width: 55%;
+}
+.custom-right-r2 {
+float: right;
+width: 45%;
+}
+&lt;/style&gt;
+
+.custom-left-r2[
+- A sub-representação amostral limita a modelagem de extremos e gera viés geográfico  
+- O controle do SOC decorre de interações solo–biota–clima mediadas pelo contexto ambiental  
+- RMC, CEC e argila evidenciam hierarquias funcionais e mecanismos de estabilização do carbono  
+- Preditores como N e pH têm efeitos ambíguos: promovem acúmulo ou perda de SOC conforme o ambiente  
+- A inclusão de variáveis biológicas diretas e não apenas proxies
+- Utilização de IA explicável por meio do "*Soil-Informed Machine Learning*", integração pedologia e ecologia
+
+
+]
+
+.custom-right-r2[
+
+&lt;div style="text-align: center;"&gt;
+&lt;img src="./img/map_full.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+
+]
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Conclusão Geral
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+---
+
+&lt;style type="text/css"&gt;
+.custom-left-r4 {
+float: left;
+width: 65%;
+}
+.custom-right-r4 {
+float: right;
+width: 35%;
+}
+&lt;/style&gt;
+
+# Conclusão Geral
+
+
+
+.custom-left-r4[
+
+- Raízes estruturam a rizosfera e regulam a ciclagem de C e nutrientes  
+- Solos argilosos reduzem a sensibilidade climática; arenosos amplificam riscos  
+- IA explicável revelou novos controladores funcionais (ex.: RMC)  
+- Interações não lineares entre solo, clima e biota exigem abordagem integrada  
+- Limitações: escassez de dados robustos em regiões críticas (trópicos e áridas)  
+- SSP5-8.5 agrava riscos em solos frágeis de altas latitudes  
+- É urgente padronizar dados, integrar biologia e adotar modelos interpretáveis  
+- Solo como eixo para biodiversidade, clima e resiliência dos ecossistemas 
+
+]
+
+.custom-right-r4[
+
+&lt;div style="text-align: center;"&gt;
+
+&lt;img src="./img/soil_bio.png" style="max-width: 100%; border-radius: 10px;" /&gt;
+
+&lt;/div&gt;
+]
+
+
+---
+
+class: inverse, center, middle
+
+# Referências
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    hr.custom-line {
+      border: none;
+      height: 1px;
+      background-color: #F7F7F7;
+      width: 1000px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hr class="custom-line"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+---
+
+# Referências
+
+Chen, S., Shuai, Q., Arrouays, D., Chen, Z., Dai, L., Hong, Y., Hu, B., Huang, Y., Ji, W., Li, S., Liang, Z., Ma, Y., Richer-de-Forges, A. C., Schillaci, C., Su, Y., Teng, H., Wang, N., Wang, X., Wang, Y., … Shi, Z. (2024). *GSOCS-LULCC: The Global Soil Organic Carbon Stock dataset after Land Use and Land Cover Change*. https://doi.org/10.5194/essd-2024-373
+
+Calisto, L., Sousa, L. M., &amp; Batjes, N. H. (2023). *Standardised soil profile data for the world (WoSIS snapshot – December 2023)* (Vol. 10). ISRIC Data Hub. https://doi.org/10.17027/isric-wdcsoils-20231130
+
+Guerrero-Ramírez, N. R., Mommer, L., Freschet, G. T., Iversen, C. M., McCormack, M. L., Kattge, J., Poorter, H., van der Plas, F., Bergmann, J., Kuyper, T. W., York, L. M., Bruelheide, H., Laughlin, D. C., Meier, I. C., Roumet, C., Semchenko, M., Sweeney, C. J., van Ruijven, J., Valverde-Barrantes, O. J., … Weigelt, A. (2021). Global root traits (GRooT) database. *Global Ecology and Biogeography, 30*(1), 25–37. https://doi.org/10.1111/geb.13179
+
+Jian, J., Vargas, R., Anderson-Teixeira, K., Stell, E., Herrmann, V., Horn, M., Kholod, N., Manzon, J., Marchesi, R., Paredes, D., &amp; Bond-Lamberty, B. (2021). A restructured and updated global soil respiration database (SRDB-V5). *Earth System Science Data, 13*(2), 255–267. https://doi.org/10.5194/essd-13-255-2021
+
+Tedersoo, L., Mikryukov, V., Anslan, S., Bahram, M., Khalid, A. N., Corrales, A., Agan, A., Vasco-Palacios, A. M., Saitta, A., Antonelli, A., Rinaldi, A. C., Verbeken, A., Sulistyo, B. P., Tamgnoue, B., Furneaux, B., Ritter, C. D., Nyamukondiwa, C., Sharp, C., Marín, C., … Abarenkov, K. (2021). The Global Soil Mycobiome consortium dataset for boosting fungal diversity research. *Fungal Diversity, 111*(1), 573–588. https://doi.org/10.1007/s13225-021-00493-7
+
+
+
+
+---
+
+background-image: url("./img/agrad.png")
+background-size: 100%
+background-position: center
+class: clear
+
+
+&lt;div style="position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;"&gt;
+Agradecimentos
+&lt;/div&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "ratio": "16:10",
+  "lib_dir": "libs",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
