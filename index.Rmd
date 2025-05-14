@@ -841,7 +841,7 @@ class: inverse, center, middle
 ---
 
 
-# Artigo 1
+# Artigo 1 - Fungos do solo
 
 ```{css echo=FALSE}
 .custom-left-r1 {
@@ -856,7 +856,7 @@ width: 50%;
 
 .custom-left-r1[
 - Desbalanceamento de dados limita a modelagem, especialmente em regiões tropicais e áridas
-- Alta variabilidade fúngica compromete a precisão, mesmo com bons algoritmos como o quantile random forest
+- Alta variabilidade fúngica compromete a precisão, mesmo com o quantile random forest
 - Riqueza elevada em florestas tropicais devido à complexidade vegetal e ao aporte contínuo de matéria orgânica
 - Diversidade reduzida em ambientes áridos, marcada por comunidades especializadas adaptadas ao estresse
 - Fatores edáficos e uso do solo influenciam diretamente a atividade fúngica e devem ser considerados em estratégias conservacionistas
@@ -910,7 +910,7 @@ class: inverse, center, middle
 
 ---
 
-# Artigo 2
+# Artigo 2 - Raízes
 
 ```{css echo=FALSE}
 .custom-left-r2 {
@@ -992,7 +992,7 @@ class: inverse, center, middle
 ---
 
 
-# Artigo 3
+# Artigo 3 - Respiração do solo
 
 ```{css echo=FALSE}
 .custom-left-r1 {
@@ -1007,7 +1007,7 @@ width: 50%;
 
 .custom-left-r1[
 - A textura do solo, especialmente o teor de argila, influencia fortemente as respostas de Rs e Rh ao aquecimento
-- A inclusão de variáveis texturais nos modelos aumentou a precisão das predições
+- A inclusão de variáveis pedológicas nos modelos aumentou a precisão das predições
 - A sensibilidade ao aquecimento varia por região e cenário climático, sendo maior em solos arenosos e de alta latitude
 - Solos argilosos demonstram menor sensibilidade ao aquecimento por protegerem melhor o carbono orgânico
 - É necessário ampliar a base de dados de Rs e Rh e investigar as respostas de diferentes solos frente às mudanças climáticas
@@ -1068,7 +1068,7 @@ class: inverse, center, middle
 
 
 
-# Artigo 4
+# Artigo 4 - Estoque de carbono do solo
 
 - O modelo ajustado superou o modelo nulo com maior acurácia, mesmo com maior erro nos extremos  
 - A inclusão direta de variáveis edafobiológicas permitiu capturar processos negligenciados por abordagens baseadas apenas em sensoriamento remoto 
@@ -1087,7 +1087,7 @@ class: inverse, center, middle
 
 ---
 
-# Artigo 4
+# Artigo 4 - Estoque de carbono do solo
 
 ```{css echo=FALSE}
 .custom-left-r3 {
@@ -1125,7 +1125,7 @@ width: 45%;
 
 
 
-# Artigo 4
+# Artigo 4 - Estoque de carbono do solo
 
 ```{css echo=FALSE}
 .custom-left-r4 {
@@ -1285,5 +1285,54 @@ class: clear
 
 <div style="position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
 Agradecimentos
+</div>
+
+
+---
+
+background-image: url("./img/clara.jpg")
+background-size: 100%
+background-position: center
+class: clear
+
+
+<div style="position: absolute; bottom: 0px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
+Muito obrigado!!!
+</div>
+
+---
+
+background-image: url("./img/agrad_1.jpg")
+background-size: 100%
+background-position: top
+class: clear
+
+
+<div style="position: absolute; bottom: 0px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
+Muito obrigado!!!
+</div>
+
+---
+
+background-image: url("./img/agrad_2.jpg")
+background-size: 100%
+background-position: top
+class: clear
+
+
+<div style="position: absolute; bottom: 0px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
+Muito obrigado!!!
+</div>
+
+---
+
+background-image: url("./img/agrad_3.jpg")
+background-size: 100%
+background-position: top
+class: clear
+
+
+<div style="position: absolute; bottom: 0px; width: 100%; text-align: center; font-size: 2em; font-weight: bold; color: #1A1A2E;">
+Muito obrigado!!!
 </div>
 
